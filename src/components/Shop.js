@@ -11,7 +11,7 @@ function Shop() {
 
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get('http://127.0.0.1:8000/prodapi/').then(res => {
+        axios.get('https://django-rest-backend-ecom.herokuapp.com/prodapi/').then(res => {
             
             setData(res.data)
             
