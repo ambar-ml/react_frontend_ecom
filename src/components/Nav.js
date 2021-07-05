@@ -141,7 +141,7 @@ function Nav() {
                             </li>
 
                              </ul>
-                             <ul>
+                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                              <li>
                                  {loggedin?<Button variant="dark">Welcome-{usermail}</Button>:''}
                              </li>
