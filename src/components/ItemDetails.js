@@ -18,7 +18,7 @@ function ItemDetail({ match }) {
     //Fetch data
     useEffect(() => {
 
-        axios.get(`http://127.0.0.1:8000/prodapi/${match.params.id}`, { withCredentials: true }).then(res => {
+        axios.get(`https://django-rest-backend-ecom.herokuapp.com/prodapi/${match.params.id}`, { withCredentials: true }).then(res => {
 
             setData(res.data)
             console.log(match.params.id)
