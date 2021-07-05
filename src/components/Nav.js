@@ -93,7 +93,7 @@ function Nav() {
 
         <div >
 
-            <nav className="navbar navbar-expand navbar-dark bg-dark navbar-default navbar-static-top">
+            <nav className="navbar navbar-expand navbar-dark bg-dark navbar-default navbar-fixed">
                 <div className="container-fluid">
                     
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
