@@ -14,7 +14,7 @@ function Women({match}) {
 
     const [data, setData] = useState([])
     useEffect(() => {
-        axios.get(`http://127.0.0.1:8000/category/?category=women&sub_category=${match.params.cat}`).then(res => {
+        axios.get(`https://django-rest-backend-ecom.herokuapp.com/category/?category=women&sub_category=${match.params.cat}`).then(res => {
             console.log(res.data)
             setData(res.data)
             
