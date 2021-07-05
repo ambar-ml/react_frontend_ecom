@@ -141,6 +141,7 @@ function Nav() {
                             </li>
 
                              </ul>
+                             <ul>
                              <li>
                                  {loggedin?<Button variant="dark">Welcome-{usermail}</Button>:''}
                              </li>
@@ -152,7 +153,7 @@ function Nav() {
                              {logout?<Logout/>:""}
                                 
 
-
+                             <li>
                            <Link to={"/cart"}> <IconButton aria-label="cart">
                                 <Badge color="secondary" badgeContent={[count]} >
                                     <ShoppingCartIcon style={{ color: "white" }} >
@@ -160,7 +161,8 @@ function Nav() {
                                     </ShoppingCartIcon>
 
                                 </Badge>
-                            </IconButton></Link>
+                            </IconButton></Link></li>
+                                </ul>
 
                             <form className="d-flex">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={e => updateSearch(e.target.value)} />
