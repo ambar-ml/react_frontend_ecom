@@ -93,10 +93,9 @@ function Nav() {
 
         <div >
         
-         <meta charset="utf-8" name="viewport" 
-        content= "width=device-width, initial-scale=1.0"/>
+        
 
-            <nav className="navbar navbar-expand navbar-dark bg-dark navbar-default navbar-fixed-top">
+            <nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-default navbar-fixed-top">
                 <div className="container-fluid">
                     
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
