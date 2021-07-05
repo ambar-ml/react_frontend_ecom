@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory,NavLink } from 'react-router-dom'
-import { NavDropdown,Button,Navbar } from 'react-bootstrap'
+import { NavDropdown,Button,Navbar} from 'react-bootstrap'
 import Badge from '@material-ui/core/Badge'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import { IconButton } from '@material-ui/core'
@@ -106,7 +106,7 @@ function Nav() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     
                   
-                   
+                       
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <li className="nav-item">
@@ -156,9 +156,12 @@ function Nav() {
                                  <Button variant="dark">Log in</Button></Link>}
                                 
                              {logout?<Logout/>:""}
+                             
                                 
 
+                             </Navbar.Collapse>
                              
+                            
                            <Link to={"/cart"}> <IconButton aria-label="cart">
                                 <Badge color="secondary" badgeContent={[count]} >
                                     <ShoppingCartIcon style={{ color: "white" }} >
@@ -168,13 +171,15 @@ function Nav() {
                                 </Badge>
                             </IconButton></Link>
                                 
-
+                            
                             <form className="d-flex">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={e => updateSearch(e.target.value)} />
                                    <button className="btn btn-outline-success" type="submit" onClick={searchHandler}>Search</button>
                             </form>
                             
-                    </Navbar.Collapse>
+                            
+                            
+                    
                     </div>
             </Navbar>
         </div>
