@@ -12,7 +12,7 @@ function Search({match}){
     const [data,updateData]=useState([])
     
     useEffect(()=>{
-         axios.get(`http://127.0.0.1:8000/search/?search=${match.params.search}`).then(res=>{
+         axios.get(`https://django-rest-backend-ecom.herokuapp.com/search/?search=${match.params.search}`).then(res=>{
              updateData(res.data)
 
          })
