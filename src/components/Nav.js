@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { Link, useHistory,NavLink } from 'react-router-dom'
-import { NavDropdown,Button } from 'react-bootstrap'
+import { NavDropdown,Button,Navbar } from 'react-bootstrap'
 import Badge from '@material-ui/core/Badge'
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import { IconButton } from '@material-ui/core'
@@ -95,24 +95,29 @@ function Nav() {
         
         
 
-            <nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-default navbar-fixed-top">
-                <div className="container-fluid">
-                    
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" >
+            {/*<nav className="navbar navbar-expand-sm navbar-dark bg-dark navbar-default navbar-fixed-top">  
+              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#myMenu" aria-controls="myMenu"  aria-label="Toggle navigation" >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                     <div className="collapse navbar-collapse" id="myMenu">*/}
+            <Navbar expand='lg' bg="dark">
+                <div className="container-fluid">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    
+                  
+                   
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
 
                             <li className="nav-item">
-                                <Link to="/" style={{ textDecoration: 'none' }} className="nav-link"> Home</Link>
+                                <Link to="/" style={{ textDecoration: 'none',color:'white' }} className="nav-link"> Home</Link>
 
                             </li>
 
 
                             <li className="nav-item">
 
-                                <Link to="/Shop" style={{ textDecoration: 'none' }} className="nav-link"> Shop</Link>
+                                <Link to="/Shop" style={{ textDecoration: 'none',color:'white' }} className="nav-link"> Shop</Link>
                             </li>
 
 
@@ -120,16 +125,16 @@ function Nav() {
 
 
                             <li className="nav-item">
-                                <Link to="/Contact" style={{ textDecoration: 'none' }} className="nav-link"> Contact Us </Link>
+                                <Link to="/Contact" style={{ textDecoration: 'none',color:'white' }} className="nav-link"> Contact Us </Link>
                             </li>
 
-                            <NavDropdown title="Men"  id="basic-nav-dropdown" >
+                            <NavDropdown title="Men"  id="basic-nav-dropdown" className="basic-nav" style={{color:"white"}} >
                                 <NavDropdown.Item onClick={()=>menHandler('upper')} >Upper wear </NavDropdown.Item>
                                 <NavDropdown.Item onClick={()=>menHandler('lower')} >Lower wear </NavDropdown.Item>
                                
                                 <NavDropdown.Item onClick={()=>menHandler('shoes')} >Shoes </NavDropdown.Item>
                                 </NavDropdown>
-                            <NavDropdown title="Women" id="basic-nav-dropdown">
+                            <NavDropdown title="Women" id="basic-nav-dropdow">
                             <NavDropdown.Item onClick={()=>womenHandler('upper')} >Upper wear </NavDropdown.Item>
                                 <NavDropdown.Item onClick={()=>womenHandler('lower')} >Lower wear </NavDropdown.Item>
                                
@@ -138,24 +143,22 @@ function Nav() {
 
                             
                             
-                            <li className="nav-item">
-                                <Link to="/checkout" style={{ textDecoration: 'none' }} className="nav-link"> Checkout </Link>
-                            </li>
+                           
 
                              </ul>
-                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                             <li>
+                             
+                             
                                  {loggedin?<Button variant="dark">Welcome-{usermail}</Button>:''}
-                             </li>
-                             <li>
+                             
+                             
                              {loggedin?<Button onClick={logoutHandler} variant="dark" >Log out</Button>:
                              <Link to="/login">
-                                 <Button variant="dark">Log in</Button></Link>}</li>
+                                 <Button variant="dark">Log in</Button></Link>}
                                 
                              {logout?<Logout/>:""}
                                 
 
-                             <li>
+                             
                            <Link to={"/cart"}> <IconButton aria-label="cart">
                                 <Badge color="secondary" badgeContent={[count]} >
                                     <ShoppingCartIcon style={{ color: "white" }} >
@@ -163,17 +166,17 @@ function Nav() {
                                     </ShoppingCartIcon>
 
                                 </Badge>
-                            </IconButton></Link></li>
-                                </ul>
+                            </IconButton></Link>
+                                
 
                             <form className="d-flex">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={e => updateSearch(e.target.value)} />
                                    <button className="btn btn-outline-success" type="submit" onClick={searchHandler}>Search</button>
                             </form>
                             
+                    </Navbar.Collapse>
                     </div>
-                    </div>
-            </nav>
+            </Navbar>
         </div>
 
 
