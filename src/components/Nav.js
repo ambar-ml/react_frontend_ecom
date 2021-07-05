@@ -94,7 +94,7 @@ function Nav() {
         <div >
         
          <meta charset="utf-8" name="viewport" 
-        content= "width=device-width, initial-scale=1.0">
+        content= "width=device-width, initial-scale=1.0"/>
 
             <nav className="navbar navbar-expand navbar-dark bg-dark navbar-default navbar-fixed">
                 <div className="container-fluid">
