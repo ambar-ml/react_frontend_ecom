@@ -25,7 +25,7 @@ function Contact(){
     const buttonHandler=(e)=>{
       e.preventDefault()
       const data={first_name:firstName,last_name:lastName,email:emailid,country:countr,question:quest}
-      axios.post("http://127.0.0.1:8000/contactusapi/",data).then((res)=>{
+      axios.post("https://django-rest-backend-ecom.herokuapp.com/contactusapi/",data).then((res)=>{
       console.log(res.data)
       
       setopen(true)
