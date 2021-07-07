@@ -4,6 +4,7 @@ import Products from './Prods'
 import { Link } from 'react-router-dom'
 import Nav from './Nav'
 
+
 import { Carousel, Card, Button, ButtonGroup, ButtonToolbar, Container, Row, Col } from 'react-bootstrap'
 
 function ItemDetail({ match }) {
@@ -51,7 +52,7 @@ function ItemDetail({ match }) {
         upData(prevup => prevup + count)
     }
 
-    
+
 
     const getCart = () => {
         if (localStorage.getItem('cart') == null) {
@@ -98,11 +99,13 @@ function ItemDetail({ match }) {
     return (
         <div>
             <Nav />
-            <Container className="my-4">
-                <Card className="mb-3">
+            <Container>
+
+                {/*<Container className="my-4">
+                <Card className="mb-3" >
                     <Row className="no-gutters">
                         <Col className="md-4 ">
-                            <Card.Img src={data.image} />
+                            <Card.Img src={data.image} className="card-img" />
                         </Col>
                         <Col className="md-8">
                             <Card.Body>
@@ -125,6 +128,29 @@ function ItemDetail({ match }) {
 
                     </Row>
 
+                </Card>
+    </Container>*/}
+                <Card className="my-5" >
+                    <Card.Img variant="top" src={data.image} className="card-img" />
+                    <Card.Body>
+                        
+                            <Card.Title>{data.prod_name} </Card.Title>
+                            <Card.Text>{data.desc}</Card.Text>
+                            <div className="text-center">
+                            <Button onClick={clickHandler} >-</Button>
+
+                            {count}
+
+
+
+                            <Button onClick={() => updateCount(prevcount => prevcount + 1)} >+</Button>
+
+
+
+                            <Button onClick={() => cartHandler() } className="mx-2" >Add to Cart</Button>
+                            </div>
+                        
+                    </Card.Body>
                 </Card>
             </Container>
 

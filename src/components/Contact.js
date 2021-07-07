@@ -75,10 +75,11 @@ function Contact(){
     <Form.Label>Ask Us</Form.Label>
     <Form.Control as="textarea" rows={3} onChange={e=>updateQuestion(e.target.value)} />
   </Form.Group>
-  
+  <div className="text-center">
   <Button variant="primary" type="submit" onClick={buttonHandler}>
     Submit
   </Button>
+  </div>
 </Form>
 <div className="container">
 <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>

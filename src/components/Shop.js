@@ -43,17 +43,20 @@ function Shop() {
 
                            
                         
-
-                            <Card key={index} style={{width:'18rem'}} border={'dark'} className="text-center h-100"   >
+                            <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <Card key={index} style={{width:'18rem'}} border={'dark'} className="text-center h-100 card"   >
                                 <Card.Img variant="top" src={data.image} />
                                 <Card.Body >
-                                    <Card.Title>{data.prod_name} RS-{data.price}</Card.Title>
+                                    <Card.Title>{data.prod_name}</Card.Title>
+                                    <Card.Title>RS-{data.price}</Card.Title>
                                     <Card.Text>
+                                        
                                         {data.desc}
                                     </Card.Text>
                                   <Link to={`/shop/${data.id}`}>  <Button variant="dark">View/Buy Product</Button></Link>
                                 </Card.Body>
                             </Card>
+                            </div>
 
                         
 

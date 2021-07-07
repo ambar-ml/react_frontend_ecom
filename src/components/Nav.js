@@ -100,9 +100,9 @@ function Nav() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                      <div className="collapse navbar-collapse" id="myMenu">*/}
-            <Navbar expand='lg' bg="dark">
+            <Navbar expand='lg' bg="dark" className="navbar-dark" >
                 <div className="container-fluid">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav"  />
                 <Navbar.Collapse id="basic-navbar-nav">
                     
                   
@@ -162,7 +162,7 @@ function Nav() {
                              </Navbar.Collapse>
                              
                             
-                           <Link to={"/cart"}> <IconButton aria-label="cart">
+                           <Link to={"/cart"}> <IconButton aria-label="cart" className="d-flex">
                                 <Badge color="secondary" badgeContent={[count]} >
                                     <ShoppingCartIcon style={{ color: "white" }} >
 
